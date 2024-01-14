@@ -134,6 +134,47 @@ footer .logos img:hover {
     scale: 1.1;
 }
 
+.search_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.search_section #searchInput {
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.search_section #searchInput:focus {
+    outline: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.search_section #searchButton {
+    background-color: #363b81;
+    color: #fbd743;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    padding: 10px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search_section #searchButton:hover {
+    scale: 1.1;
+}
+
 .pokemon-card {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -351,7 +392,7 @@ footer .logos img:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    font-size: 0.9em;
+    font-size: 0.7em;
 }
 
 .pokemon-info ul {

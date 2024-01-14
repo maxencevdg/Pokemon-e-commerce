@@ -1,3 +1,33 @@
+document.addEventListener('DOMContentLoaded', function () {
+    fetchPokemons()
+    const showMoreButton = document.querySelector("#showMore")
+    if (showMoreButton) {
+        showMoreButton.addEventListener('click', fetchPokemons)
+    }
+    const searchButton = document.querySelector("#searchButton")
+    if (searchButton) {
+        searchButton.addEventListener('click', function() {
+            const searchInput = document.querySelector("#searchInput")
+            if (searchInput && searchInput.value) {
+                fetch(`https://pokeapi.co/api/v2/pokemon/${searchInput.value.toLowerCase()}`)
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json()
+                    } else {
+                        throw new Error('Pokémon non trouvé')
+                    }
+                })
+                .then((pokemonData) => {
+                    window.location.href = 'html/page_produit.html?id=' + pokemonData.id
+                })
+                .catch((error) => {
+                    document.querySelector("#searchResult").textContent = error.message
+                })
+            }
+        })
+    }
+})
+
 let lastPokemonId = 0
 
 function fetchPokemons() {

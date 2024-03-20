@@ -1,4 +1,5 @@
 # Pokemon-e-commerce
+This is a school project. The goal was to use an API with Vanilla Javascript to create a website where are on it every Pokemon 
 
 ## Technical Stack
 This project utilizes the following technologies:
